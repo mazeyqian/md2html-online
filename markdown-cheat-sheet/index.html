@@ -1,0 +1,729 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Markdown Cheatsheet</title>
+	<link type="text/css" href="https://mazey.cn/cdn/bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet" />
+	<style>
+		body {
+			margin: 0 20px 20px 20px;
+		}
+	</style>
+</head>
+
+<body>
+<h1 id="markdown-cheat-sheet">Markdown Cheat Sheet</h1>
+<h2 id="overview">Overview</h2>
+<ul>
+	<li>
+		<a href="#text-basics">Text basics</a>
+	</li>
+	<li>
+		<a href="#text-strikethrough">Text strikethrough</a>
+	</li>
+	<li>
+		<a href="#super-subscript">Super/Subscript</a>
+	</li>
+	<li>
+		<a href="#toc">Table of Contents</a>
+	</li>
+	<li>
+		<a href="#footnotes">Footnotes</a>
+	</li>
+	<li>
+		<a href="#indentation">Indentation</a>
+	</li>
+	<li>
+		<a href="#titles">Titles</a>
+	</li>
+	<li>
+		<a href="#lists">Lists</a>
+	</li>
+	<li>
+		<a href="#links">Links</a>
+	</li>
+	<li>
+		<a href="#anchors">Anchors / Navigation</a>
+	</li>
+	<li>
+		<a href="#images">Images</a>
+	</li>
+	<li>
+		<a href="#code">Code</a>
+	</li>
+	<li>
+		<a href="#comments">Comments</a>
+	</li>
+	<li>
+		<a href="#math">Math</a>
+	</li>
+	<li>
+		<a href="#github-flavored">Github Flavored Markdown</a>
+	</li>
+	<li>
+		<a href="#parsers-extensions">Parsers &amp; Extensions</a>
+	</li>
+	<li>
+		<a href="#tables">Tables</a>
+	</li>
+	<li>
+		<a href="#definition-lists">Definition Lists</a>
+	</li>
+</ul>
+<p>Part of this cheatsheet is the original work of:
+	<a href="https://github.com/revolunet/sublimetext-markdown-preview">revolunet (ongithub)</a>, with additions/modifications I gathered from other sources (
+	<em>cse</em>).</p>
+<p>If you use the fabulous
+	<a href="http://sublimetext.com">Sublime Text 2/3 editor</a> along with the
+	<a href="https://github.com/revolunet/sublimetext-markdown-preview">Markdown Preview plugin</a>, open your ST3 Palette with
+	<code>CMD+⇧+P</code> then choose
+	<code>Markdown Preview in browser</code> to see the result in your browser.</p>
+<p>
+	<strong>Tool</strong>:
+	<a href="http://codebehold.com/code/poc/md2html-online/">md2html</a> -- A web app ... paste your markdown into a browser form field and click &quot;Convert&quot;.</p>
+<ul>
+	<li>
+		<strong>Reverse</strong>: Convert HTML to Markdown with
+		<a href="http://domchristie.github.io/to-markdown/">this tool</a>.</li>
+</ul>
+<p>
+	<a name="text-basics"></a>
+</p>
+<h2 id="text-basics">Text basics</h2>
+<table>
+	<thead>
+		<tr>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<code>This is *italic* and this is **bold** . another _italic_ and another __bold__</code>
+			</td>
+		</tr>
+		<tr>
+			<td>This is
+				<em>italic</em> and this is
+				<strong>bold</strong> . another
+				<em>italic</em> and another
+				<strong>bold</strong>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<table>
+	<thead>
+		<tr>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Important Text: Surround with Grave symbol (backtick):
+				<kbd>`</kbd> some text
+				<kbd>`</kbd>
+			</td>
+		</tr>
+		<tr>
+			<td>This is
+				<code>important</code> text or
+				<code>code</code>.</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	<br>
+</p>
+<p>
+	<a name="text-strikethrough"></a>
+</p>
+<h2 id="strikethrough-text">Strikethrough Text</h2>
+<p>Place two tildes (~) on each side of text for strikethrough.</p>
+<p>
+	<code>~~This is strikethrough text~~</code>
+</p>
+<p>
+	<del>This is strikethrough text</del>
+</p>
+<p>
+	<a name="super-subscript"></a>
+</p>
+<h2 id="superscript-amp-subscript">Superscript &amp; Subscript</h2>
+<div style="font-size:12px;padding-bottom:10px;">
+	<em>This is really just HTML and is included here as an additional reference. Markdown deficiencies are sometimes easily-remedied
+		with HTML. Depending on the markdown environment, HTML is rendered properly alongside markdown</em> —
+	<strong>IFF</strong>
+	<em>there is no mixed nesting!</em>
+</div>
+
+<p>Surround with
+	<code>&lt;sup&gt;</code> or
+	<code>&lt;sub&gt;</code> HTML tags</p>
+<pre>&lt;sup&gt;superscript&lt;/sup&gt;
+&lt;sub&gt;subscript&lt;/sub&gt;
+</pre>
+<p>
+	<strong>Example</strong>
+</p>
+<p>
+	<code>This is a phrase with superscript&lt;sup&gt;cool&lt;/sup&gt; and with subscript&lt;sub&gt;sick&lt;/sub&gt;</code>
+</p>
+<p>This is a phrase with superscript
+	<sup>cool</sup> and with subscript
+	<sub>sick</sub>
+</p>
+<p>
+	<a name="indentation"></a>
+</p>
+<h2 id="indentation">Indentation</h2>
+<pre>&gt; Here is some indented text
+&gt;&gt; even more indented
+</pre>
+<blockquote>
+	<p>Here is some indented text</p>
+	<blockquote>
+		<p>even more indented</p>
+	</blockquote>
+</blockquote>
+<p>
+	<a name="toc"></a>
+</p>
+<h2 id="table-of-contents-toc-">Table of Contents (TOC)</h2>
+<p>Insert
+	<code>[ TOC ]</code> without spaces to generate a table of contents (builtin parsers only).</p>
+<p>
+	<a name="footnotes"></a>
+</p>
+<h2 id="footnotes">Footnotes</h2>
+<pre>FOOTNOTE: [^footnote-1] [^footnote-2] [^cnn] …
+    Later, your footnotes will appear at the bottom of the document regardless of where you place their definition
+</pre>
+<p>This is a paragraph with a footnote (builtin parser only). [^footnote-1] This is another footnote[^footnote-2]. Footnotes,
+	they should be on the news[^cnn], but not the weather
+	<a href="[TWC]">^weather</a>.</p>
+<pre>FOOTNOTE DEFINED HERE … placed at &#39;foot&#39; of document
+[^footnote-1]: This is the text of the first footnote.
+[^footnote-2]: This is the text of the second footnote.
+[^cnn]: [CNN](http://cnn.com] - Cable News Network
+[^weather]: [TWC]
+
+[TWC]: http://weather.com
+</pre>
+<p>[^footnote-1]: This is the text of the first footnote. [^footnote-2]: This is the text of the second footnote. [^cnn]:
+	<a
+	  href="http://cnn.com">CNN</a> - Cable News Network </p>
+<p>
+	<a name="titles"></a>
+</p>
+<h2 id="titles">Titles</h2>
+<pre># Big title (h1)
+
+## Middle title (h2)
+
+### Smaller title (h3)
+
+#### and so on (hX)
+
+##### and so on (hX)
+
+###### and so on (hX)
+</pre>
+<h1 id="big-title-h1-">Big title (h1)</h1>
+<h2 id="middle-title-h2-">Middle title (h2)</h2>
+<h3 id="smaller-title-h3-">Smaller title (h3)</h3>
+<h4 id="and-so-on-hx-">and so on (hX)</h4>
+<h5 id="and-so-on-hx-">and so on (hX)</h5>
+<h6 id="and-so-on-hx-">and so on (hX)</h6>
+<p>
+	<a name="lists"></a>
+</p>
+<h2 id="lists">Lists</h2>
+<pre> - bullets can be `-`, `+`, or `*`
+ - bullet list 1
+ - bullet list 2
+    - sub item 1
+    - sub item 2
+
+        with indented text inside
+
+ - bullet list 3
+ + bullet list 4
+ * bullet list 5
+</pre>
+<ul>
+	<li>bullets can be
+		<code>-</code>,
+		<code>+</code>, or
+		<code>*</code>
+	</li>
+	<li>bullet list 1</li>
+	<li>
+		<p>bullet list 2</p>
+		<ul>
+			<li>sub item 1</li>
+			<li>
+				<p>sub item 2</p>
+				<p> with indented text inside</p>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<p>bullet list 3</p>
+	</li>
+	<li>bullet list 4</li>
+	<li>bullet list 5</li>
+</ul>
+<p>
+	<a name="links"></a>
+</p>
+<h2 id="links">Links</h2>
+<pre>This is an [example inline link (google)](http://google.com/) and [another one with a title](http://google.com/ &quot;Hello, world&quot;).
+
+Links can also be reference based : [reference 1 (google.com)][ref1] or [reference 2 with title (google.com)][ref2].
+</pre>
+<p>This is an
+	<a href="http://google.com/">example inline link (google)</a> and
+	<a href="http://google.com/" title="Hello, world">another one with a title/tool-tip</a>.</p>
+<p>Links can also be reference based :
+	<a href="http://google.com/">reference 1 (google.com)</a> or
+	<a href="http://google.com/" title="Title: Google">reference 2 with title (google.com)</a>.</p>
+<p>References are usually placed at the bottom of the document like this: </p>
+<pre>[ref1]: http://google.com/
+</pre>
+<p>
+	<a name="anchors"></a>
+</p>
+<h2 id="anchors-navigation-link-in-document-">Anchors / Navigation (Link
+	<em>in-document</em>)</h2>
+<p>Offer navigation within your document with something like this:</p>
+<pre>## Overview
+
+* [Features](#features)
+* [Commands](#commands)
+* [Installation](#anchor-name)
+</pre>
+<p>
+	<strong>THEN</strong>, place anchors throughout the document which correspond to the intra-document links noted in &quot;Overview&quot;.</p>
+<p>
+	<code>&lt;a name=&quot;anchor-name&quot;&gt;&lt;/a&gt;</code>
+</p>
+<p>
+	<a name="images"></a>
+</p>
+<h2 id="images">Images</h2>
+<p>A sample image (hosted on codebehold.com):</p>
+<pre>![Lena - Public Domain](https://mazey.cn/asset/lena-128-indexed.png)
+</pre>
+<p>
+	<img src="https://mazey.cn/asset/lena-128-indexed.png" alt="Lena - Public Domain">
+</p>
+<p>Local relative path
+	<strong>IFF</strong>
+	<em>converted HTML is final render</em>
+</p>
+<pre>![](lena-128-indexed.png)
+</pre>
+<p>
+	<img src="lena-128-indexed.png" alt="">
+</p>
+<p>As links, images can also use references instead of inline links :</p>
+<pre>![lena][] … Then, later in document, usually bottom … 
+[Lena]:https://mazey.cn/asset/lena-128-indexed.png
+</pre>
+<p>
+	<img src="https://mazey.cn/asset/lena-128-indexed.png" alt="lena">
+</p>
+<h3 id="embed-base64-images-within-the-markdown-">Embed base64 images within the markdown!</h3>
+<p>Ensure the base 64 image is all on a single line --
+	<strong>no spaces</strong>!</p>
+<p>
+	<strong>Tool</strong>:
+	<a href="http://codebehold.com/code/example/img2base64/">Image to Base 64 Converter WebApp</a>
+</p>
+<h4 id="embed-format">Embed Format</h4>
+<pre class="brush: text;">//ref in doc
+![tag_txt][]  
+
+//link (at bottom of md file)
+[tag_txt]:data:image/png;base64,iVBORw0KGgo...
+</pre>
+<h4 id="example">Example</h4>
+<pre>// inline
+![Redragon M901 PERDITION](data:image/webp;base64,UklGRngWAABXRUJQVlA4IGwWAABweA … BnABNEAAAAAAA)
+</pre>
+<p>
+	<em>Better for the readability of your markdown file to include/embed base64 images as references</em>
+</p>
+<p>
+	<strong>Redragon M901 PERDITION 16400 DPI High-Precision Programmable Laser Gaming Mouse for PC, MMO, 18 Programmable Buttons, Weight
+		Tuning Cartridge, 12 Side Buttons, 5 programmable user profiles, Omron Micro Switches (Black)</strong>
+</p>
+<pre>// linked (better)
+![Redragon M901 PERDITION][]
+... then, at the bottom of your markdown file, place the reference
+[Redragon M901 PERDITION]:data:image/webp;base64,UklGRng ... ABNEAAAAAAA
+</pre>
+<p>
+	<img src="data:image/webp;base64,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"
+	  alt="Redragon M901 PERDITION">
+</p>
+<p>
+	<a name="code"></a>
+</p>
+<h2 id="code">Code</h2>
+<p>It&#39;s quite easy to show code in markdown files.</p>
+<p>Backticks can be used to
+	<code>highlight</code> some words.</p>
+<p>Also, any indented block is considered a code block. If
+	<code>enable_highlight</code> is
+	<code>true</code>, syntax highlighting will be included (for the builtin parser - the github parser does this automatically).</p>
+<pre>&lt;script&gt;
+    document.location = &#39;http://lmgtfy.com/?q=markdown+cheat+sheet&#39;;
+&lt;/script&gt;
+</pre>
+<p>
+	<a name="comments"></a>
+</p>
+<h2 id="comments">Comments</h2>
+<p>Method 1 </p>
+<pre>&lt;!---
+    comment
+--&gt;
+</pre>
+<!---
+    Your comment goes here and here
+-->
+<p>Method 2: Doesn&#39;t show up in the converted source code</p>
+<pre>[//]: # (This may be the most platform independent comment)
+</pre>
+<p>
+	<a name="math"></a>
+</p>
+<h2 id="math">Math</h2>
+<p>When
+	<code>enable_mathjax</code> is
+	<code>true</code>, inline math can be included \(\frac{\pi}{2}\) $\pi$</p>
+<p>Alternatively, math can be written on its own line:</p>
+<p>$$F(\omega) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(t) \, e^{ - i \omega t}dt$$</p>
+<p>\[\int_0^1 f(t) \mathrm{d}t\]</p>
+<p>\[\sum_j \gamma_j^2/d_j\]</p>
+<p>
+	<a name="github-flavored"></a>
+</p>
+<h2 id="github-flavored-markdown">GitHub Flavored Markdown</h2>
+<p>If you use the Github parser, you can use some of
+	<a href="http://github.github.com/github-flavored-markdown/">Github Flavored Markdown</a> syntax :</p>
+<ul>
+	<li>
+		<p>User/Project@SHA: revolunet/sublimetext-markdown-preview@7da61badeda468b5019869d11000307e07e07401</p>
+	</li>
+	<li>
+		<p>User/Project#Issue: revolunet/sublimetext-markdown-preview#1</p>
+	</li>
+	<li>
+		<p>User : @revolunet</p>
+	</li>
+</ul>
+<p>Some Python code :</p>
+<pre class="brush: js;">import random
+
+class CardGame(object):
+    &quot;&quot;&quot; a sample python class &quot;&quot;&quot;
+    NB_CARDS = 32
+    def __init__(self, cards=5):
+        self.cards = random.sample(range(self.NB_CARDS), 5)
+        print &#39;ready to play&#39;
+</pre>
+<p>Some Javascript code :</p>
+<pre class="brush: js;">var config = {
+    duration: 5,
+    comment: &#39;WTF&#39;
+}
+// callbacks beauty un action
+async_call(&#39;/path/to/api&#39;, function(json) {
+    another_call(json, function(result2) {
+        another_another_call(result2, function(result3) {
+            another_another_another_call(result3, function(result4) {
+                alert(&#39;And if all went well, i got my result :)&#39;);
+            });
+        });
+    });
+})
+</pre>
+<p>The Github Markdown also brings some
+	<a href="http://www.emoji-cheat-sheet.com/">nice Emoji support</a> : :+1: :heart: :beer:</p>
+<p>
+	<a name="parsers-extensions"></a>
+</p>
+<h2 id="parsers-and-extensions">Parsers and Extensions</h2>
+<p>Markdown Preview comes with
+	<strong>Python-Markdown</strong> preloaded.</p>
+<h3 id="-python-markdown-">
+	<em>Python-Markdown</em>
+</h3>
+<p>The
+	<a href="https://github.com/waylan/Python-Markdown">Python-Markdown Parser</a> provides support for several extensions.</p>
+<h4 id="extra-extensions">Extra Extensions</h4>
+<ul>
+	<li>
+		<code>abbr</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/abbreviations.html">Abbreviations</a>
+	</li>
+	<li>
+		<code>attr_list</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/attr_list.html">Attribute Lists</a>
+	</li>
+	<li>
+		<code>def_list</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/definition_lists.html">Definition Lists</a>
+	</li>
+	<li>
+		<code>fenced_code</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/fenced_code_blocks.html">Fenced Code Blocks</a>
+	</li>
+	<li>
+		<code>footnotes</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/footnotes.html">Footnotes</a>
+	</li>
+	<li>
+		<code>tables</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/tables.html">Tables</a>
+	</li>
+	<li>
+		<code>smart_strong</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/smart_strong.html">Smart Strong</a>
+	</li>
+</ul>
+<p>You can enable them all at once using the
+	<code>extra</code> keyword.</p>
+<pre>extensions: [ &#39;extra&#39; ]
+</pre>
+<p>If you want all the extras plus the
+	<code>toc</code> extension, your settings would look like this:</p>
+<pre>{
+    ...
+    parser: &#39;markdown&#39;,
+    extensions: [&#39;extra&#39;, &#39;toc&#39;],
+    ...
+}
+</pre>
+<h4 id="other-extensions">Other Extensions</h4>
+<p>There are also some extensions that are not included in Markdown Extra but come in the standard Python-Markdown library.</p>
+<ul>
+	<li>
+		<code>code-hilite</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/code_hilite.html">CodeHilite</a>
+	</li>
+	<li>
+		<code>html-tidy</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/html_tidy.html">HTML Tidy</a>
+	</li>
+	<li>
+		<code>header-id</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/header_id.html">HeaderId</a>
+	</li>
+	<li>
+		<code>meta_data</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/meta_data.html">Meta-Data</a>
+	</li>
+	<li>
+		<code>nl2br</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/nl2br.html">New Line to Break</a>
+	</li>
+	<li>
+		<code>rss</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/rss.html">RSS</a>
+	</li>
+	<li>
+		<code>sane_lists</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/sane_lists.html">Sane Lists</a>
+	</li>
+	<li>
+		<code>smarty</code> --
+		<a href="https://pythonhosted.org/Markdown/extensions/smarty.html">Smarty</a>
+	</li>
+	<li>
+		<code>toc</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/toc.html">Table of Contents</a>
+	</li>
+	<li>
+		<code>wikilinks</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/wikilinks.html">WikiLinks</a>
+	</li>
+</ul>
+<h4 id="3rd-party-extensions">3rd Party Extensions</h4>
+<p>
+	<em>Python-Markdown</em> is designed to be extended.</p>
+<p>Some included ones are:</p>
+<ul>
+	<li>
+		<code>delete</code> -- github style delte support via
+		<code>~~word~~</code>
+	</li>
+	<li>
+		<code>githubemoji</code> -- github emoji support</li>
+	<li>
+		<code>tasklist</code> -- github style tasklists</li>
+	<li>
+		<code>magiclink</code> -- github style auto link conversion of http|ftp links</li>
+	<li>
+		<code>headeranchor</code> -- github style header anchor links</li>
+	<li>
+		<code>github</code> -- Adds the above extensions in one shot</li>
+	<li>
+		<code>b64</code> -- convert and embed local images to base64. Setup by adding this
+		<code>b64(base_path=${BASE_PATH})</code>
+	</li>
+</ul>
+<p>There are also a number of others available:</p>
+<p>Just fork this repo and add your extensions inside the
+	<code>.../Packages/Markdown Preview/markdown/extensions/</code> folder.</p>
+<p>Check out the list of
+	<a href="https://github.com/waylan/Python-Markdown/wiki/Third-Party-Extensions">3rd Party extensions</a>.</p>
+<h4 id="default-extensions">Default Extensions</h4>
+<p>The default extensions are:</p>
+<ul>
+	<li>
+		<code>footnotes</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/footnotes.html">Footnotes</a>
+	</li>
+	<li>
+		<code>toc</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/toc.html">Table of Contents</a>
+	</li>
+	<li>
+		<code>fenced_code</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/fenced_code_blocks.html">Fenced Code Blocks</a>
+	</li>
+	<li>
+		<code>tables</code> --
+		<a href="http://pythonhosted.org/Markdown/extensions/tables.html">Tables</a>
+	</li>
+</ul>
+<p>Use the
+	<code>default</code> keyword, to select them all. If you want all the defaults plus the
+	<code>definition_lists</code> extension, your settings would look like this:</p>
+<pre>{
+    ...
+    parser: &#39;markdown&#39;,
+    extensions: [&#39;default&#39;, &#39;definition_lists&#39;],
+    ...
+}
+</pre>
+<p>
+	<a name="tables"></a>
+</p>
+<h2 id="tables">Tables</h2>
+<p>The
+	<code>tables</code> extension of the
+	<em>Python-Markdown</em> parser is activated by default, but is currently
+	<strong>not</strong> available in
+	<em>Markdown2</em>.</p>
+<p>The syntax was adopted from the
+	<a href="http://michelf.ca/projects/php-markdown/extra/#table">php markdown project</a>, and is also used in github flavoured markdown.</p>
+<pre>| Year | Temp °C (low) | Temp °C (high) |  
+| --- | --- | --- |   ←  notice only three dashes are needed for each column
+| 1900 | -10 | 25 |  
+| 1910 | -15 | 30 |  
+| 1920 | -10 | 32 | 
+</pre>
+<p>Yields:</p>
+<table>
+	<thead>
+		<tr>
+			<th>Year</th>
+			<th>Temp &#176;C (low)</th>
+			<th>Temp &#xB0;C (high)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1900</td>
+			<td>-10</td>
+			<td>25</td>
+		</tr>
+		<tr>
+			<td>1910</td>
+			<td>-15</td>
+			<td>30</td>
+		</tr>
+		<tr>
+			<td>1920</td>
+			<td>-10</td>
+			<td>32</td>
+		</tr>
+	</tbody>
+</table>
+<pre>COLON  — COLUMN ALIGNMENT
+| ----: |   ← Right Align
+| :---: |   ← Center Align
+| :--- |    ← Left Align (default if no colons are used)
+</pre>
+<p>Alignment shown below: Right, Center, Center</p>
+<table>
+	<thead>
+		<tr>
+			<th style="text-align:right">Directional</th>
+			<th style="text-align:center">Number</th>
+			<th style="text-align:center">Char</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="text-align:right">Left</td>
+			<td style="text-align:center">1</td>
+			<td style="text-align:center">J</td>
+		</tr>
+		<tr>
+			<td style="text-align:right">Up</td>
+			<td style="text-align:center">2</td>
+			<td style="text-align:center">K</td>
+		</tr>
+		<tr>
+			<td style="text-align:right">Down</td>
+			<td style="text-align:center">3</td>
+			<td style="text-align:center">L</td>
+		</tr>
+		<tr>
+			<td style="text-align:right">Right</td>
+			<td style="text-align:center">4</td>
+			<td style="text-align:center">;</td>
+		</tr>
+	</tbody>
+</table>
+<h3 id="wiki-tables">Wiki Tables</h3>
+<p>If you are using
+	<em>Markdown2</em> with the
+	<code>wiki-tables</code> extra activated you should see a table below:</p>
+<p>||
+	<em>Year</em> ||
+	<em>Temperature (low)</em> ||
+	<em>Temperature (high)</em> ||
+	<br>|| 1900 || -10 || 25 ||
+	<br>|| 1910 || -15 || 30 ||
+	<br>|| 1920 || -10 || 32 || </p>
+<p>
+	<a name="definition-lists"></a>
+</p>
+<h2 id="definition-lists">Definition Lists</h2>
+<p>This example requires
+	<em>Python Markdown</em>&#39;s
+	<code>def_list</code> extension.</p>
+<pre>Apple
+:   Pomaceous fruit of plants of the genus Malus in 
+    the family Rosaceae.
+
+Orange
+:   The fruit of an evergreen tree of the genus Citrus.
+</pre>
+<p>Apple : Pomaceous fruit of plants of the genus Malus in the family Rosaceae.</p>
+<p>Orange : The fruit of an evergreen tree of the genus Citrus.</p>
+
+</body>
+
+</html>
